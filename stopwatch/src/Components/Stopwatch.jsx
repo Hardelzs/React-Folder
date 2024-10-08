@@ -10,12 +10,12 @@ const Stopwatch = () => {
     const [isRunning, setIsRunning] = useState(false);
 
     useEffect(() =>{
-        let intervalid;
+        let Interlaid;
         if(isRunning){
-            //setting time from 0 to 1 every 10 millisecond using javscript setInterval method
-            intervalid = setInterval(() => setTime(time + 1), 10);
+            //setting time from 0 to 1 every 10 millisecond using Javascript setInterval method
+            Interlaid = setInterval(() => setTime(time + 1), 10);
         }
-        return () => clearInterval(intervalid);
+        return () => clearInterval(Interlaid);
     }, [isRunning, time])
 
     //hours val

@@ -42,8 +42,7 @@ const Stopwatch = () => {
   // Method to save a lap time
   const lap = () => {
     if (isRunning) {
-      const lapTime = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds.toString().padStart(2,   
- "0")}`;
+      const lapTime = ` ${ hours} : ${minutes.toString().padStart(2, "0")} : ${seconds.toString().padStart(2, "0")} : ${milliseconds.toString().padStart(2, "0")}`;
       setLapTimes([...lapTimes, lapTime]);
     }
   };
@@ -58,7 +57,7 @@ const Stopwatch = () => {
     <div className="stopwatch-container bg-[#000] text-white h-screen">
 
         <h1 className="text-4xl font-mono text-center p-4">Stopwatch</h1>
-        <p className="stopwatch-time text-8xl md:text-9xl
+        <p className="stopwatch-time text-4xl md:text-9xl
          text-center p-10">
             {hours}:{minutes.toString().padStart(2, "0")}:{seconds.toString().padStart(2, "0")}:{milliseconds.toString().padStart(2, "0")}
         </p>
@@ -69,14 +68,14 @@ const Stopwatch = () => {
         </div>
         <div className="lap-times">
         <h2 className="text-4xl text-center p-6">Lap Times</h2>
-        <ul>
+        <ul className="bg-black">
           {lapTimes.map((lapTime, index) => (
-            <li className="text-4xl text-center space-x-8 flex items-center place-content-center" key={index}> #{index + 1}:  <li> {lapTime}</li> </li>
+            <li className="text-2xl md:text-4xl text-center space-x-8 flex items-center place-content-center" key={index}> #{index + 1} :<li>{lapTime}</li> </li>
 
           ))}
         </ul>
       </div>
-        <h1 className=" text-2xl text-center text-emerald-600">created with &#9825; by hardelz😎</h1>
+        <h1 className=" text-1xl md:text-2xl text-center text-emerald-600 bg-black p-8">created with &#9825; by hardelz😎</h1>
 
     </div>
   )

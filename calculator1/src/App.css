@@ -3,7 +3,10 @@
   padding: 10px;
 }
 
-
+.play{
+  position: absolute;
+  width: 100%;
+}
 .main{
   background-color: rgb(233, 224, 212);
   display: flex;
@@ -81,4 +84,16 @@
   top: 65%;
   margin-left: 50%;
   animation: rate 4s infinite ease-in-out;
+}
+.mart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  border: black solid 1px;
+}
+
+fieldset{
+  padding: 10%;
 }

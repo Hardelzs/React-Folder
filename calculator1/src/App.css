@@ -33,7 +33,7 @@
   top: 0;
   position: absolute;
   margin-left: 60%;
-  animation: rate 3s infinite ease-in-out;
+  animation: rate 5s infinite ease-in-out;
 }
 .main1{
   background-color: rgb(233, 224, 212);
@@ -54,7 +54,7 @@
   width: 35vh;
   border-radius: 90%;
   opacity: 0.3;
-  animation: rate 3s infinite ease-in-out;
+  animation: rate 2s infinite ease-in-out;
 }
 .main4{
   background-color: rgb(233, 224, 212);

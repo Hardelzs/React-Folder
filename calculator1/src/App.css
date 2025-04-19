@@ -1,38 +1,84 @@
-.App {
+.App{
   text-align: center;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main{
+  background-color: rgb(233, 224, 212);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 90%;
+  opacity: 0.3;
+  animation: rate 3s infinite ease-in-out;
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes rate {
+  0%{
+    background-color: rgb(255, 255, 255);
+  }
+  100%{
+    background-color: rgb(233, 224, 212);
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main3{
+  background-color: rgb(233, 224, 212);
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 90%;
+  opacity: 0.3;
+  top: 0;
+  position: absolute;
+  margin-left: 60%;
+  animation: rate 3s infinite ease-in-out;
+}
+.main1{
+  background-color: rgb(233, 224, 212);
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 90%;
+  opacity: 0.3;
+  margin-left: 30%;
+  animation: rate 3s infinite ease-in-out;
+}
+.main2{
+  background-color: rgb(233, 224, 212);
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 90%;
+  opacity: 0.3;
+  animation: rate 3s infinite ease-in-out;
+}
+.main4{
+  background-color: rgb(233, 224, 212);
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 90%;
+  opacity: 0.3;
+  top: 50%;
+  position: absolute;
+  margin-left: 80%;
+  animation: rate 3s infinite ease-in-out;
+}
+.main5{
+  position: absolute;
+  background-color: rgb(233, 224, 212);
+  display: flex;
+  justify-content: center;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 90%;
+  opacity: 0.3;
+  top: 65%;
+  margin-left: 50%;
+  animation: rate 4s infinite ease-in-out;
 }

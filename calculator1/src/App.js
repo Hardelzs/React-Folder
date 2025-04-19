@@ -81,10 +81,10 @@ function App() {
                         type="text"
                         name="firstname"
                         id="firstname"
-                        // value={firstName}
-                        // onChange={(e) =>
-                        //     setFirstName(e.target.value)
-                        // }
+                        value={firstName}
+                        onChange={(e) =>
+                            setFirstName(e.target.value)
+                        }
                         placeholder="Enter First Name"
                         required
                     />
@@ -93,10 +93,10 @@ function App() {
                         type="text"
                         name="lastname"
                         id="lastname"
-                        // value={lastName}
-                        // onChange={(e) =>
-                        //     setLastName(e.target.value)
-                        // }
+                        value={lastName}
+                        onChange={(e) =>
+                            setLastName(e.target.value)
+                        }
                         placeholder="Enter Last Name"
                         required
                     />
@@ -105,10 +105,10 @@ function App() {
                         type="email"
                         name="email"
                         id="email"
-                        // value={email}
-                        // onChange={(e) =>
-                        //     setEmail(e.target.value)
-                        // }
+                        value={email}
+                        onChange={(e) =>
+                            setEmail(e.target.value)
+                        }
                         placeholder="Enter email"
                         required
                     />
@@ -117,10 +117,10 @@ function App() {
                         type="tel"
                         name="contact"
                         id="contact"
-                        // value={contact}
-                        // onChange={(e) =>
-                        //     setContact(e.target.value)
-                        // }
+                        value={contact}
+                        onChange={(e) =>
+                            setContact(e.target.value)
+                        }
                         placeholder="Enter Mobile number"
                         required
                     />
@@ -130,10 +130,10 @@ function App() {
                         name="gender"
                         value="male"
                         id="male"
-                        // checked={gender === "male"}
-                        // onChange={(e) =>
-                        //     setGender(e.target.value)
-                        // }
+                        checked={gender === "male"}
+                        onChange={(e) =>
+                            setGender(e.target.value)
+                        }
                     />
                     Male
                     <input
@@ -141,10 +141,10 @@ function App() {
                         name="gender"
                         value="female"
                         id="female"
-                        // checked={gender === "female"}
-                        // onChange={(e) =>
-                        //     setGender(e.target.value)
-                        // }
+                        checked={gender === "female"}
+                        onChange={(e) =>
+                            setGender(e.target.value)
+                        }
                     />
                     Female
                     <input
@@ -152,10 +152,10 @@ function App() {
                         name="gender"
                         value="other"
                         id="other"
-                        // checked={gender === "other"}
-                        // onChange={(e) =>
-                        //     setGender(e.target.value)
-                        // }
+                        checked={gender === "other"}
+                        onChange={(e) =>
+                            setGender(e.target.value)
+                        }
                     />
                     Other
                     <label for="lang">
@@ -165,30 +165,30 @@ function App() {
                         type="checkbox"
                         name="lang"
                         id="english"
-                        // checked={subjects.english === true}
-                        // onChange={(e) =>
-                        //     handleSubjectChange("english")
-                        // }
+                        checked={subjects.english === true}
+                        onChange={(e) =>
+                            handleSubjectChange("english")
+                        }
                     />
                     English
                     <input
                         type="checkbox"
                         name="lang"
                         id="maths"
-                        // checked={subjects.maths === true}
-                        // onChange={(e) =>
-                        //     handleSubjectChange("maths")
-                        // }
+                        checked={subjects.maths === true}
+                        onChange={(e) =>
+                            handleSubjectChange("maths")
+                        }
                     />
                     Maths
                     <input
                         type="checkbox"
                         name="lang"
                         id="physics"
-                        // checked={subjects.physics === true}
-                        // onChange={(e) =>
-                        //     handleSubjectChange("physics")
-                        // }
+                        checked={subjects.physics === true}
+                        onChange={(e) =>
+                            handleSubjectChange("physics")
+                        }
                     />
                     Physics
                     <label for="file">Upload Resume*</label>
@@ -196,9 +196,9 @@ function App() {
                         type="file"
                         name="file"
                         id="file"
-                        // onChange={(e) =>
-                        //     setResume(e.target.files[0])
-                        // }
+                        onChange={(e) =>
+                            setResume(e.target.files[0])
+                        }
                         placeholder="Enter Upload File"
                         required
                     />
@@ -207,9 +207,9 @@ function App() {
                         type="url"
                         name="url"
                         id="url"
-                        // onChange={(e) =>
-                        //     setUrl(e.target.value)
-                        // }
+                        onChange={(e) =>
+                            setUrl(e.target.value)
+                        }
                         placeholder="Enter url"
                         required
                     />
@@ -217,17 +217,17 @@ function App() {
                     <select
                         name="select"
                         id="select"
-                        // value={selectedOption}
-                        // onChange={(e) =>
-                        //     setSelectedOption(
-                        //         e.target.value
-                        //     )
-                        // }
+                        value={selectedOption}
+                        onChange={(e) =>
+                            setSelectedOption(
+                                e.target.value
+                            )
+                        }
                     >
                         <option
                             value=""
                             disabled
-                            // selected={selectedOption === ""}
+                            selected={selectedOption === ""}
                         >
                             Select your Ans
                         </option>
@@ -255,23 +255,23 @@ function App() {
                         id="about"
                         cols="30"
                         rows="10"
-                        // onChange={(e) =>
-                        //     setAbout(e.target.value)
-                        // }
+                        onChange={(e) =>
+                            setAbout(e.target.value)
+                        }
                         placeholder="About your self"
                         required
                     ></textarea>
                     <button
                         type="reset"
                         value="reset"
-                        // onClick={() => handleReset()}
+                        onClick={() => handleReset()}
                     >
                         Reset
                     </button>
                     <button
                         type="submit"
                         value="Submit"
-                        // onClick={(e) => handleSubmit(e)}
+                        onClick={(e) => handleSubmit(e)}
                     >
                         Submit
                     </button>

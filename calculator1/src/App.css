@@ -1,11 +1,12 @@
 .App{
   text-align: center;
   padding: 10px;
+  height: 100vh;
 }
 
 .play{
   position: absolute;
-  width: 100%;
+  width: 90%;
 }
 .main{
   background-color: rgb(233, 224, 212);
@@ -87,6 +88,9 @@
 }
 .mart{
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
@@ -95,6 +99,9 @@
   text-align: center;
   margin: auto;
   margin-top: 20px;
+  position: absolute;
+  left: 35%;
+  bottom: 19%;
 }
 
 h1 {

@@ -167,3 +167,7 @@ textarea {
   min-height: 100px;
   max-height: 150px;
 }
+.output{
+  margin-left: 10%;
+  position: absolute;
+}

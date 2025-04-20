@@ -168,6 +168,7 @@ textarea {
   max-height: 150px;
 }
 .output{
-  margin-left: 10%;
+  margin-left: 40%;
   position: absolute;
+  background-color: #ddd;
 }

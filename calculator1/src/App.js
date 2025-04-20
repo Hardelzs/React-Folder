@@ -66,7 +66,7 @@ function App() {
         setSubmittedData(null);
     }
     return (
-        <div className="App">
+        <div className={`App ${submittedData ? "blur" : ""}`}>
             <div className="play">
                 <div className="main"></div>
                 <div className="main1"></div>
@@ -234,6 +234,7 @@ function App() {
 
             {submittedData && (
                 <div className="output" onClick={closeModal}>
+                    <div className="output-content" onClick={(e) => e.stopPropagation()}></div>
                     <h2>Submitted Data:</h2>
                     <p><strong>First Name:</strong> {submittedData.firstName}</p>
                     <p><strong>Last Name:</strong> {submittedData.lastName}</p>

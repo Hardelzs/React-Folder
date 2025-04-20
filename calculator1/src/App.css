@@ -165,6 +165,11 @@ textarea {
   width: 98%;
   min-height: 100px;
   max-height: 150px;
+  padding: 10px;
+}
+.App.blur{
+  filter: blur(0.1px);
+  pointer-events: fixed;
 }
 .output{
   margin-left: 33%;
@@ -183,12 +188,11 @@ textarea {
   text-align: center;
   animation: rate 3s infinite ease-in-out;
   opacity: 0.3;
-  animation: rate 3s infinite ease-in-out;
-  animation-delay: 0.5s;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-play-state: running;
+}
+.output-content{
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -1,7 +1,7 @@
 .App{
   text-align: center;
   padding: 10px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .play{
@@ -101,7 +101,6 @@
   margin-top: 20px;
   position: absolute;
   left: 35%;
-  bottom: 19%;
 }
 
 h1 {
@@ -168,7 +167,28 @@ textarea {
   max-height: 150px;
 }
 .output{
-  margin-left: 40%;
+  margin-left: 33%;
+  padding: 10%;
+  top: 2%;
+  z-index: 1000;
   position: absolute;
-  background-color: #ddd;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #327c35;
+  font-weight: bold;
+  text-align: center;
+  animation: rate 3s infinite ease-in-out;
+  opacity: 0.3;
+  animation: rate 3s infinite ease-in-out;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
 }

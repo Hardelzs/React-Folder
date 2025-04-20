@@ -42,6 +42,8 @@ function App() {
         }));
     };
 
+    
+
     const handleReset = () => {
         setFirstName("");
         setLastName("");
@@ -60,6 +62,9 @@ function App() {
         setSubmittedData(null);
     };
 
+    const closeModal = () => {
+        setSubmittedData(null);
+    }
     return (
         <div className="App">
             <div className="play">
@@ -228,7 +233,7 @@ function App() {
             </div>
 
             {submittedData && (
-                <div className="output">
+                <div className="output" onClick={closeModal}>
                     <h2>Submitted Data:</h2>
                     <p><strong>First Name:</strong> {submittedData.firstName}</p>
                     <p><strong>Last Name:</strong> {submittedData.lastName}</p>

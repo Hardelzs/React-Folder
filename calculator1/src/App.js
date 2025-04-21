@@ -51,9 +51,9 @@ function App() {
         setContact("");
         setGender("male");
         setSubjects({
-            english: true,
-            maths: false,
-            physics: false,
+            English: true,
+            Maths: false,
+            Physics: false,
         });
         setResume("");
         setUrl("");

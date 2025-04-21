@@ -27,8 +27,6 @@ const App = () => {
       <label htmlFor="">First name</label>
       <input type="text" name="" id="" value={secondname} onChange={(e) => setsecondname(e.target.value)} />
 
-      <label htmlFor="">First name</label>
-      <input type="text" name="" id="" value={secondname} onChange={(e) => setsecondname(e.target.value)} />
 
       <button onClick={(e) => handleSubmit(e)}>Submit</button>
       <button onClick={(e) => handleReset(e)}>Reset</button>

@@ -3,11 +3,13 @@ import "./App.css";
 
 const App = () => {
   const [firstname, setFirstName] = useState("")
+  const [secondname, setsecondname] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault;
     const data = {
-      firstname
+      firstname,
+      secondname
     }
     console.log("form:", data);
     
@@ -15,11 +17,15 @@ const App = () => {
 
   const handleReset = () => {
     setFirstName("")
+    setsecondname("")
   }
   return (
     <div>
       <label htmlFor="">First name</label>
       <input type="text" name="" id="" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+
+      <label htmlFor="">First name</label>
+      <input type="text" name="" id="" value={secondname} onChange={(e) => setsecondname(e.target.value)} />
 
       <button onClick={(e) => handleSubmit(e)}>Submit</button>
       <button onClick={(e) => handleReset(e)}>Reset</button>

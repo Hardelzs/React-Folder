@@ -20,9 +20,12 @@ const App = () => {
     setsecondname("")
   }
   return (
-    <div>
+    <div className='flex'>
       <label htmlFor="">First name</label>
       <input type="text" name="" id="" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+
+      <label htmlFor="">First name</label>
+      <input type="text" name="" id="" value={secondname} onChange={(e) => setsecondname(e.target.value)} />
 
       <label htmlFor="">First name</label>
       <input type="text" name="" id="" value={secondname} onChange={(e) => setsecondname(e.target.value)} />

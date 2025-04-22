@@ -5,6 +5,7 @@ import "./App.css";
 const App = () => {
   const [firstname, setFirstname] = useState("")
   const [secondname, setSecondname] = useState("")
+  const [submitted, setSubmitted] = useState(null)
 
   const handlesubmit = (e) => {
     e.preventDefault;
@@ -12,13 +13,14 @@ const App = () => {
       firstname,
       secondname
     }
-    console.log("Form", data);
+    setSubmitted(data);
     
   }
 
   const handlereset = () => {
     setFirstname("")
     setSecondname("")
+    submitted("")
   }
   return (
     <div className='flex'>
@@ -30,8 +32,19 @@ const App = () => {
 
       <button type="submit" onClick={(e) => handlesubmit(e)}>Submit</button>
       <button type="submit" onClick={(e) => handlereset(e)}>Reset</button>
+
+      {submitted && (
+    <div>
+      <h1>Submitted Data</h1>
+      <h1>firstname: {submitted.firstname}</h1>
     </div>
+  )}
+    </div>
+
+    
   )
+
+
 }
 
 export default App

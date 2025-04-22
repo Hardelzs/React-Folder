@@ -22,6 +22,19 @@ const App = () => {
     setSecondname("")
     submitted("")
   }
+
+  const handleCopy = () => {
+    if(submitted) {
+      const textCopy = `
+        First Name: ${submitted.firstname}, 
+        Second Name: ${submitted.secondname}`;
+      navigator.clipboard.writeText(textCopy).then(() => {
+        alert("Copied")
+      })
+    }
+  }
+
+
   return (
     <div className='flex'>
       <label htmlFor="">First Name</label>
@@ -34,9 +47,11 @@ const App = () => {
       <button type="submit" onClick={(e) => handlereset(e)}>Reset</button>
 
       {submitted && (
-    <div>
+    <div className="submit">
       <h1>Submitted Data</h1>
-      <h1>firstname: {submitted.firstname}</h1>
+      <h1>firstName: {submitted.firstname}</h1>
+      <h1>SecondName: {submitted.secondname}</h1>
+      <button onClick={handleCopy}>Copy</button>
     </div>
   )}
     </div>

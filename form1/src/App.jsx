@@ -23,16 +23,14 @@ const App = () => {
     submitted("")
   }
 
-  const handleCopy = () => {
-    if(submitted) {
-      const textCopy = `
-        First Name: ${submitted.firstname}, 
-        Second Name: ${submitted.secondname}`;
-      navigator.clipboard.writeText(textCopy).then(() => {
-        alert("Copied")
-      })
-    }
+const handleCopy = () => {
+  if(submitted) {
+    const textCopy = `First Name : ${submitted.firstname}, Second Name : ${submitted.secondname}`;
+    navigator.clipboard.writeText(textCopy).then(() => {
+      alert("Copied to clipboard")
+    })
   }
+}
 
 
   return (

@@ -51,15 +51,11 @@ const App = () => {
       <h1>Submitted Data</h1>
       <h1>firstName: {submitted.firstname}</h1>
       <h1>SecondName: {submitted.secondname}</h1>
-      <button onClick={handleCopy}>Copy</button>
+      <button onClick={handleCopy}>Copy To Clipboard</button>
     </div>
   )}
-    </div>
-
-    
+    </div> 
   )
-
-
 }
 
 export default App

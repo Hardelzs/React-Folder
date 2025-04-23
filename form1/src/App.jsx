@@ -1,59 +1,72 @@
-
 import { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const [firstname, setFirstname] = useState("")
-  const [secondname, setSecondname] = useState("")
-  const [submitted, setSubmitted] = useState(null)
+  const [firstname, setFirstname] = useState("");
+  const [secondname, setSecondname] = useState("");
+  const [submitted, setSubmitted] = useState(null);
 
   const handlesubmit = (e) => {
     e.preventDefault;
     const data = {
       firstname,
-      secondname
-    }
+      secondname,
+    };
     setSubmitted(data);
-    
-  }
+  };
 
   const handlereset = () => {
-    setFirstname("")
-    setSecondname("")
-    submitted("")
-  }
+    setFirstname("");
+    setSecondname("");
+    submitted("");
+  };
 
-const handleCopy = () => {
-  if(submitted) {
-    const textCopy = `First Name : ${submitted.firstname}, Second Name : ${submitted.secondname}`;
-    navigator.clipboard.writeText(textCopy).then(() => {
-      alert("Copied to clipboard")
-    })
-  }
-}
-
+  const handleCopy = () => {
+    if (submitted) {
+      const textCopy = `First Name : ${submitted.firstname}, Second Name : ${submitted.secondname}`;
+      navigator.clipboard.writeText(textCopy).then(() => {
+        alert("Copied to clipboard");
+      });
+    }
+  };
 
   return (
-    <div className='flex'>
+    <div className="flex">
       <label htmlFor="">First Name</label>
-      <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
+      <input
+        type="text"
+        value={firstname}
+        onChange={(e) => setFirstname(e.target.value)}
+      />
 
       <label htmlFor="">Second Name </label>
-      <input type="text" value={secondname} onChange={(e) => setSecondname(e.target.value)}  />
+      <input
+        type="text"
+        value={secondname}
+        onChange={(e) => setSecondname(e.target.value)}
+      />
 
-      <button type="submit" onClick={(e) => handlesubmit(e)}>Submit</button>
-      <button type="submit" onClick={(e) => handlereset(e)}>Reset</button>
+      <button type="submit" onClick={(e) => handlesubmit(e)}>
+        Submit
+      </button>
+      <button type="submit" onClick={(e) => handlereset(e)}>
+        Reset
+      </button>
+
+      <div>
+        {count}
+      </div>
 
       {submitted && (
-    <div className="submit">
-      <h1>Submitted Data</h1>
-      <h1>firstName: {submitted.firstname}</h1>
-      <h1>SecondName: {submitted.secondname}</h1>
-      <button onClick={handleCopy}>Copy To Clipboard</button>
+        <div className="submit">
+          <h1>Submitted Data</h1>
+          <h1>firstName: {submitted.firstname}</h1>
+          <h1>SecondName: {submitted.secondname}</h1>
+          <button onClick={handleCopy}>Copy To Clipboard</button>
+        </div>
+      )}
     </div>
-  )}
-    </div> 
-  )
-}
+  );
+};
 
-export default App
+export default App;

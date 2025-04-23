@@ -28,6 +28,10 @@ const App = () => {
         alert("Copied to clipboard");
       });
     }
+
+    if(!submitted){
+      alert("no data bro")
+    }
   };
 
   return (
@@ -54,8 +58,10 @@ const App = () => {
       </button>
 
       <div>
-        {count}
+      
       </div>
+
+
 
       {submitted && (
         <div className="submit">

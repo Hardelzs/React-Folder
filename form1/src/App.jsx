@@ -5,6 +5,7 @@ const App = () => {
   const [firstname, setFirstname] = useState("");
   const [secondname, setSecondname] = useState("");
   const [submitted, setSubmitted] = useState(null);
+  const [submittedCount, setsubmittedcount] = useState(0)
 
 
   const handlesubmit = (e) => {
@@ -13,6 +14,7 @@ const App = () => {
       firstname,
       secondname,
     };
+    setsubmittedcount(submittedCount +1)
     setSubmitted(data);
   };
 
@@ -20,6 +22,7 @@ const App = () => {
     setFirstname("");
     setSecondname("");
     submitted(null);
+    setsubmittedcount(0)
   };
 
   const handleCopy = () => {
@@ -59,7 +62,7 @@ const App = () => {
       </button>
 
       <div className="count">
-      
+        Submited Count : {submittedCount}
       </div>
 
 

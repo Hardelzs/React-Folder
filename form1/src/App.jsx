@@ -6,6 +6,13 @@ const App = () => {
   const [secondname, setSecondname] = useState("");
   const [submitted, setSubmitted] = useState(null);
 
+  const count = {
+    count: 0,
+    increment: () => {
+      count.count++
+    }
+  }
+
   const handlesubmit = (e) => {
     e.preventDefault;
     const data = {
@@ -57,8 +64,8 @@ const App = () => {
         Reset
       </button>
 
-      <div>
-      
+      <div className="count" onClick={() => count.increment()}>
+      {count.count}
       </div>
 
 

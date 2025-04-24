@@ -6,15 +6,9 @@ const App = () => {
   const [secondname, setSecondname] = useState("");
   const [submitted, setSubmitted] = useState(null);
 
-  const count = {
-    count: 0,
-    increment: () => {
-      count.count++
-    }
-  }
 
   const handlesubmit = (e) => {
-    e.preventDefault;
+    e.preventDefault();
     const data = {
       firstname,
       secondname,
@@ -25,7 +19,7 @@ const App = () => {
   const handlereset = () => {
     setFirstname("");
     setSecondname("");
-    submitted("");
+    submitted(null);
   };
 
   const handleCopy = () => {
@@ -60,12 +54,12 @@ const App = () => {
       <button type="submit" onClick={(e) => handlesubmit(e)}>
         Submit
       </button>
-      <button type="submit" onClick={(e) => handlereset(e)}>
+      <button type="submit" onClick={handlereset}>
         Reset
       </button>
 
-      <div className="count" onClick={() => count.increment()}>
-      {count.count}
+      <div className="count">
+      
       </div>
 
 

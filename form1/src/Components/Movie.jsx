@@ -7,7 +7,7 @@ const Movie = ({movie}) => {
   return (
     <div className='movie-card'>
         <div className='movie-card-image'>
-            <img src={Movie.url} alt={Movie.title} />
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={Movie.title} />
             <div>
                 <button className='movie-overlay' onClick={handleClick}>💗</button>
             </div>
@@ -16,7 +16,7 @@ const Movie = ({movie}) => {
         <div className='movie-info'>
             <h1>{movie.title}</h1>
             <p>{movie.description}</p>
-            <p>{movie.release_date}</p>
+            <p>{movie.release_date?.split("-")[0]}</p>
         </div>
         
     </div>

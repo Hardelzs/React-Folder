@@ -1,32 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Movie from "../Components/Movie";
+import { fetchPopularMovies, searchMovies } from "../../api";
 
 const Home = () => {
-  const movies = [
-    {
-      id: 1,
-      title: "Jurassic Park",
-      description: "Dinosaurs in a theme park",
-      release_date: "1993-06-11",
-    },
-    {
-      id: 2,
-      title: "The Matrix",
-      description: "A computer hacker discovers the world is a simulation",
-      release_date: "1999-03-31",
-    },
-    {
-      id: 3,
-      title: "Inception",
-      description:
-        "A thief who steals corporate secrets through the use of dream-sharing technology",
-      release_date: "2010-07-16",
-    },
-  ];
+  
   const [search, setSearch] = useState("");
-  const handleSearch = (e) => {
+  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+   useEffect(() => {
+    const  loadPopularMovies = async () => {
+      setLoading(true)
+      try{
+        const popularMovies = await fetchPopularMovies()
+        setMovies(popularMovies)
+      } catch (err) {
+        console.error(err)
+        setError("Failed to load movies...")
+      }
+      finally {
+        setLoading(false)
+      }
+    }
+    loadPopularMovies()
+  }, [])
+
+  const handleSearch = async (e) => {
     e.preventDefault();
-    setSearch("");
+    console.log(!"Search query:", search);
+    if (!search.trim()) return
+    if(loading) return
+
+    setLoading(true)
+    try{
+      const searchResults = await searchMovies(search)
+      if (searchResults.lenght === 0) {
+        setError("No movies found")
+      }else{
+        setMovies(searchResults)
+        setError(null)
+      }
+    }catch(err) {
+      console.log(err);
+      setError("failed to search movies...")
+    }finally{
+      setLoading(false)
+    }
+    setSearch("")
   };
 
   return (
@@ -37,17 +58,23 @@ const Home = () => {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search for a movie..."
         />
         <button type="submit" className="search-button">
           search
         </button>
         </form>
 
+        {loading && <p>Loading movies ...</p>}
+        {error && <p className="error-message">{error}</p>}
+
       </div>
       <div className="movie-grid">
+        {!loading && !error && movies.length === 0 && (
+          <p>No movies foound.</p>
+        )}
         {movies.map(
-          (movie) =>
-            movie.title.toLowerCase().startsWith(search) && (
+          (movie) => (
               <Movie key={movie.id} movie={movie} />
             )
         )}

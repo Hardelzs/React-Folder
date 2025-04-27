@@ -35,7 +35,7 @@ const Home = () => {
     setLoading(true)
     try{
       const searchResults = await searchMovies(search)
-      if (searchResults.lenght === 0) {
+      if (searchResults.length === 0) {
         setError("No movies found")
       }else{
         setMovies(searchResults)

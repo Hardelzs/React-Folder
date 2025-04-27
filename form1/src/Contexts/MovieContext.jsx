@@ -21,7 +21,7 @@ export const MovieProvider = ({ children }) => {
     setFavorites((prev) => prev.filter((movie) => movie.id !== movieId));
   };
 
-  const isFavorites = (movieId) => {
+  const isFavorite = (movieId) => {
     return favorites.some((movie) => movie.id === movieId);
   };
 
@@ -29,10 +29,19 @@ export const MovieProvider = ({ children }) => {
     favorites,
     addToFavorites,
     removeFromFavorites,
-    isFavorites,
+    isFavorite,
   };
 
   return (
     <MovieContext.Provider value={value}>{children}</MovieContext.Provider>
   );
+};
+
+
+export const useMovieContext = () => {
+  const context = React.useContext(MovieContext);
+  if (!context) {
+    throw new Error("useMovieContext must be used within a MovieProvider");
+  }
+  return context;
 };

@@ -1,10 +1,10 @@
 import React from "react";
-import "../CSS/Navbar.css";
+import "../App.css"
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="main">
+    <div className="bg-black text-white">
       <div className="movie">
         <Link to={"/"}>HdrMovie</Link>
       </div>

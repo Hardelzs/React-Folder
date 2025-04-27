@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useMovieContext } from '../Contexts/MovieContext'
 
 const Movie = ({movie}) => {
-    const [buttonClick, setButtonClick] = useState(false)
-    const handleClick =() => {
-        console.log(buttonClick);
-        
+    const {isFavorite, addToFavorites, removeFromFavorites} = useMovieContext()
+    const favorite = isFavorite(movie.id)
+
+    const handleClick =(e) => {
+        e.preventDefault()
+        if(favorite) removeFromFavorites(movie.id)
+        else addToFavorites(movie)
     }
-    useEffect(() => {
-        setButtonClick("")
-    })
+
   return (
     <div className='movie-card'>
         <div className='movie-card-image'>
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={Movie.title} />
             <div>
-                {buttonClick ? "c": "b"}
-                <button className='movie-overlay' onClick={handleClick}>💗</button>
+                <button className={`favorite-btn ${favorite? "active" : "" }`} onClick={handleClick}>💗</button>
             </div>
         </div>
 

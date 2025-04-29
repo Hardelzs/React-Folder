@@ -9,7 +9,8 @@ const Movie = ({movie}) => {
         e.preventDefault()
         if(favorite) removeFromFavorites(movie.id)
         else addToFavorites(movie)
-    console.log("favorite", favorite);
+    console.log(movie.title, favorite);
+    console.log(movie.id, favorite);
     
     }
 
@@ -18,7 +19,7 @@ const Movie = ({movie}) => {
         <div className='movie-card-image'>
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <div>
-                <button className={`favorite-btn ${favorite? "active" : "bg-red-400" }`} onClick={handleClick}>🤍</button>
+                <button className={`favorite-btn ${favorite? "bg-red-400" : "" }`} onClick={handleClick}>🤍</button>
             </div>
         </div>
 

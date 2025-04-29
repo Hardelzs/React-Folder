@@ -37,7 +37,6 @@ export const MovieProvider = ({ children }) => {
   );
 };
 
-
 export const useMovieContext = () => {
   const context = React.useContext(MovieContext);
   if (!context) {

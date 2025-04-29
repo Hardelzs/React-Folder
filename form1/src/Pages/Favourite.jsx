@@ -7,7 +7,7 @@ const Favourite = () => {
 
   if (favorites) {
     return (
-      <div>
+      <div className="">
         <h2>Your favorite</h2>
         <div className="movie-grid">
           {favorites.map((movie) => (
@@ -16,15 +16,15 @@ const Favourite = () => {
         </div>
       </div>
     );
-  }
-  return (
+  } else {
     <div>
       <h1>Favourite</h1>
       <p>This is the favourite page</p>
       <p>Here you can see your favourite items</p>
       <p>Click on the heart icon to add an item to your favourites</p>
-    </div>
-  );
+    </div>;
+  }
+  return <div></div>;
 };
 
 export default Favourite;

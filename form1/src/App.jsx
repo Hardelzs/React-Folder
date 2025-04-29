@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./Pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Favourite from "./Pages/Favourite";

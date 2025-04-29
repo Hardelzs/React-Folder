@@ -1,5 +1,6 @@
 import React from "react";
 import { useMovieContext } from "../Contexts/MovieContext";
+import { FaRegHeart } from "react-icons/fa6";
 
 const Movie = ({ movie }) => {
   const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext();
@@ -22,17 +23,17 @@ const Movie = ({ movie }) => {
         />
         <div>
           <button
-            className={`favorite-btn ${favorite ? "bg-red-400" : ""}`}
+            className={`favorite-btn ${favorite ? "text-red-400" : ""}`}
             onClick={handleClick}
           >
-            🤍
+            <FaRegHeart />
           </button>
         </div>
       </div>
 
       <div className="movie-info">
         <h1>{movie.title}</h1>
-        <p>{movie.description}</p>
+        <p>{movie.overview}</p>
         <p>{movie.release_date?.split("-")[0]}</p>
       </div>
     </div>

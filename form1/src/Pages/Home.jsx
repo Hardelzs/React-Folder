@@ -14,6 +14,8 @@ const Home = () => {
       try {
         const popularMovies = await fetchPopularMovies();
         setMovies(popularMovies);
+        console.log(popularMovies);
+        
       } catch (err) {
         console.error(err);
         setError("Failed to load movies...");
@@ -22,6 +24,7 @@ const Home = () => {
       }
     };
     loadPopularMovies();
+    
   }, []);
 
   const handleSearch = async (e) => {
@@ -37,6 +40,8 @@ const Home = () => {
         setError("No movies found");
       } else {
         setMovies(searchResults);
+        console.log(searchResults);
+        
         setError(null);
       }
     } catch (err) {

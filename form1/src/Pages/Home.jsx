@@ -54,16 +54,16 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-[1040px] mx-auto p-4">
       <div className="serch-bar">
-        <form onSubmit={handleSearch}>
+        <form onSubmit={handleSearch} className="p-2">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for a movie..."
           />
-          <button type="submit" className="search-button">
+          <button type="submit" className="border border-blac px-14 py-2">
             search
           </button>
         </form>

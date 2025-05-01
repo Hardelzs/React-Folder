@@ -54,7 +54,7 @@ const Home = () => {
   };
 
   return (
-    <div className="max-w-[1040px] mx-auto p-4">
+    <div className=" mx-auto p-4">
       <div className="serch-bar">
         <form onSubmit={handleSearch} className="p-2">
           <input
@@ -71,10 +71,10 @@ const Home = () => {
         {loading && <p>Loading movies ...</p>}
         {error && <p className="error-message">{error}</p>}
       </div>
-      <div className="movie-grid">
+      <div className="grid grid-cols-6 gap-10">
         {!loading && !error && movies.length === 0 && <p>No movies foound.</p>}
         {movies.map((movie) => (
-          <Movie key={movie.id} movie={movie} />
+          <Movie key={movie.id} movie={movie}/>
         ))}
       </div>
     </div>

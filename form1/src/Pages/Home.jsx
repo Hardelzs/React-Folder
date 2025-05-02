@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../Components/Movie";
 import { fetchPopularMovies, searchMovies } from "../../api";
+import { RiSearchLine } from "react-icons/ri";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -56,15 +57,16 @@ const Home = () => {
   return (
     <div className=" mx-auto p-4">
       <div className="serch-bar">
-        <form onSubmit={handleSearch} className="p-2">
+        <form onSubmit={handleSearch} className=" absolute flex gap-4 top-0 right-100 text-white mt-4">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for a movie..."
+            className="focus:outline-none w-full"
           />
-          <button type="submit" className="border border-blac px-14 py-2">
-            search
+          <button type="submit" className="">
+          <RiSearchLine />
           </button>
         </form>
 

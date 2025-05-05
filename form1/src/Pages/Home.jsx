@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../Components/Movie";
+import Footer from "../Components/Footer";
 import { fetchPopularMovies, searchMovies } from "../../api";
 import { RiSearchLine } from "react-icons/ri";
 
@@ -79,6 +80,8 @@ const Home = () => {
           <Movie key={movie.id} movie={movie}/>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 };

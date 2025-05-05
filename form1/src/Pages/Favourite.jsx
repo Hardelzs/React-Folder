@@ -1,6 +1,7 @@
 import React from "react";
 import { useMovieContext } from "../Contexts/MovieContext";
 import Movie from "../Components/Movie";
+import Footer from "../Components/Footer";
 
 const Favourite = () => {
   const { favorites } = useMovieContext();
@@ -14,17 +15,10 @@ const Favourite = () => {
             <Movie key={movie.id} movie={movie} />
           ))}
         </div>
+        <Footer />
       </div>
     );
-  } else {
-    <div>
-      <h1>Favourite</h1>
-      <p>This is the favourite page</p>
-      <p>Here you can see your favourite items</p>
-      <p>Click on the heart icon to add an item to your favourites</p>
-    </div>;
   }
-  return <div></div>;
 };
 
 export default Favourite;

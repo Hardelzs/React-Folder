@@ -53,49 +53,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* second one  */}
-          <div className="grid grid-cols-2 md:flex md:gap-32">
-            <div className="">
-              <ul className="flex flex-col gap-10">
-                <li>Home</li>
-                <li>Aboutus</li>
-                <li>Service</li>
-                <li>Contact</li>
-                <li>Givenow</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Home</li>
-                <li>Aboutus</li>
-                <li>Service</li>
-                <li>Contact</li>
-                <li>Givenow</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Home</li>
-                <li>Aboutus</li>
-                <li>Service</li>
-                <li>Contact</li>
-                <li>Givenow</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Home</li>
-                <li>Aboutus</li>
-                <li>Service</li>
-                <li>Contact</li>
-                <li>Givenow</li>
-              </ul>
-            </div>
-          </div>
+      
         </div>
       </div>
 
-      <div className="m-auto md:pl-20 w-full p-4 flex items-center justify-center gap-10 md:gap-80">
+      <div className="m-auto md:pl-20 w-full p-4 flex items-center justify-center gap-10 md:gap-80 -mt-14">
         <div>© 2025 HdrMovie</div>
 
         <div className="flex gap-4 justify-between items-center">

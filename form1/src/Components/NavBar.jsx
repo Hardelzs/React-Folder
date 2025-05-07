@@ -10,7 +10,7 @@ const NavBar = () => {
         <Link to={"/"}>HdrMovie</Link>
       </div>
 
-      <div className="flex gap-4 p-4">
+      <div className="">
         <Link to={"/"}>
           <h1>Home</h1>
         </Link>

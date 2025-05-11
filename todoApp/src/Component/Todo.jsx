@@ -19,8 +19,8 @@ const Todo = () => {
 
   return (
     <div className="flex  items-center justify-center" >
-      <div className="mt-20 rounded-md bg-white flex-col p-4 h-auto w-1/2
-    ">
+      <div className="mt-20 rounded-md bg-white flex-col p-4 h-auto w-1/2"
+      >
       <div className="w-1/2 m-2 text-violet-950 font-semibold size-9 font-36">To-Do List</div>
       <div className="flex justify-center align-center">
         <input ref={inputRef} type="text" placeholder="Add your task" className="rounded-full bg-[#edeef0] w-[576px] h-[50px] size-5 p-4 outline-none"/>
